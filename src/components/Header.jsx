@@ -4,17 +4,17 @@ export default function Header({ onQuoteClick }) {
   const [open, setOpen] = useState(false)
 
   const navItem = (label, href) => (
-    <a href={href} className="text-slate-200 hover:text-white transition-colors">{label}</a>
+    <a href={href} className="text-white/90 hover:text-white transition-colors">{label}</a>
   )
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-slate-900/70 border-b border-slate-800">
+    <header className="sticky top-0 z-40 backdrop-blur bg-[#2D545D]/95 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg shadow-blue-500/25" />
+          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#E3C074] to-[#2D545D] shadow-lg shadow-black/10" />
           <div>
-            <div className="text-white font-semibold tracking-tight">ErgoWorks</div>
-            <div className="text-xs text-blue-200/70">Ergonomic Chairs & Mats</div>
+            <div className="text-white font-semibold tracking-tight">ergolife</div>
+            <div className="text-xs text-white/70">Ergonomic Chairs & Mats</div>
           </div>
         </div>
 
@@ -26,22 +26,22 @@ export default function Header({ onQuoteClick }) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button onClick={() => onQuoteClick(null)} className="inline-flex items-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 transition-colors">
+          <button onClick={() => onQuoteClick(null)} className="inline-flex items-center gap-2 rounded-lg bg-[#E3C074] hover:bg-[#d6b15f] text-[#2D545D] font-medium px-4 py-2 transition-colors">
             Request a Quote
           </button>
-          <button className="md:hidden text-slate-200" onClick={() => setOpen(!open)}>
+          <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
             <span className="sr-only">Menu</span>
             ☰
           </button>
         </div>
       </div>
       {open && (
-        <div className="md:hidden border-t border-slate-800 px-6 pb-4 space-y-3">
+        <div className="md:hidden border-t border-white/10 px-6 pb-4 space-y-3 bg-[#2D545D]">
           <div className="grid gap-3">
-            <a href="#showroom" className="text-slate-200">Showroom</a>
-            <a href="#chairs" className="text-slate-200">Chairs</a>
-            <a href="#mats" className="text-slate-200">Mats</a>
-            <a href="#about" className="text-slate-200">About</a>
+            <a href="#showroom" className="text-white">Showroom</a>
+            <a href="#chairs" className="text-white">Chairs</a>
+            <a href="#mats" className="text-white">Mats</a>
+            <a href="#about" className="text-white">About</a>
           </div>
         </div>
       )}

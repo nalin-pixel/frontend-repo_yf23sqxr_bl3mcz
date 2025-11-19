@@ -10,15 +10,22 @@
     --font-mona: 'Mona Sans', system-ui, sans-serif;
     --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
     --font-manrope: 'Manrope', system-ui, sans-serif;
+
+    /* Ergolife brand palette */
+    --c-accent: #E3C074;   /* gold */
+    --c-teal: #2D545D;     /* deep teal */
+    --c-sky: #E6F8FF;      /* ice blue */
+    --c-white: #ffffff;    /* white */
   }
 
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    color-scheme: light;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-white text-slate-800;
   }
 }
 
